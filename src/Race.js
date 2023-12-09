@@ -20,6 +20,11 @@ class Race {
   static forward(car, randomNumber) {
     return randomNumber > 4 ? { ...car, distance: car.distance + 1 } : car;
   }
+
+  winner() {
+    const max = Math.max(...this.#cars.map((car) => car.distance));
+    return this.#cars.filter((car) => car.distance === max);
+  }
 }
 
 export default Race;
