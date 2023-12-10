@@ -17,8 +17,6 @@ const InputValidator = {
         '[ERROR] 자동차 이름은 쉼표(,)를 기준으로 5자 이하로 작성해주세요.'
       );
     }
-
-    return [...trimCarNames];
   },
   validateTryCount(input) {
     if (!/^[0-9]+$/.test(input)) {
@@ -28,8 +26,6 @@ const InputValidator = {
     if (Number(input) < 1) {
       throw new Error('[ERROR] 한 번 이상 이동해야 합니다.');
     }
-
-    return Number(input);
   },
 };
 
