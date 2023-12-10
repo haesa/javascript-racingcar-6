@@ -1,4 +1,4 @@
-import createRandomNumber from './random';
+import createRandomNumber from '../random';
 
 class Race {
   #cars;
