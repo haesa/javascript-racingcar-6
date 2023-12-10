@@ -1,4 +1,4 @@
-import createRandomNumber from '../random.js';
+import createRandomNumber from '../random';
 
 const Race = {
   race(cars) {
