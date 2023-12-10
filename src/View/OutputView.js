@@ -1,18 +1,17 @@
 import { Console } from '@woowacourse/mission-utils';
+import { OUTPUT } from '../constants';
 
 const OutputView = {
-  printResult() {
+  printRaceResultMessage() {
     OutputView.printNewLine();
-    Console.print('실행 결과');
+    Console.print(OUTPUT.raceResult);
   },
   printRaceResult(cars) {
-    cars.forEach((car) =>
-      Console.print(`${car.name} : ${'-'.repeat(car.distance)}`)
-    );
+    cars.forEach((car) => Console.print(OUTPUT.distance(car)));
     OutputView.printNewLine();
   },
   printWinner(winners) {
-    Console.print(`최종 우승자 : ${winners.join(', ')}`);
+    Console.print(OUTPUT.winners(winners));
   },
   printNewLine() {
     Console.print('');

@@ -16,7 +16,7 @@ class App {
   }
 
   #race(tryCount) {
-    OutputView.printResult();
+    OutputView.printRaceResultMessage();
     for (let lap = 0; lap < tryCount; lap += 1) {
       this.#cars = Race.race(this.#cars);
       OutputView.printRaceResult(this.#cars);
